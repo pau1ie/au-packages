@@ -1,7 +1,7 @@
 
 <!-- EDIT ME-->
 
-[![](https://ci.appveyor.com/api/projects/status/github/pau1ie/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/pau1ie/chocolatey-packages)
+[![](https://ci.appveyor.com/api/projects/status/github/pau1ie/au-packages?svg=true)](https://ci.appveyor.com/project/pau1ie/au-packages)
 [Update status](https://gist.github.com/pau1ie/16cc49809e3a6ffffcf4526d4a7d2cde)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/paulh](https://chocolatey.org/profiles/paulh)
