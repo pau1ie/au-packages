@@ -1,4 +1,4 @@
-~~~
+
 <!-- EDIT ME-->
 
 [![](https://ci.appveyor.com/api/projects/status/github/pau1ie/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/pau1ie/chocolatey-packages)
@@ -8,7 +8,6 @@
 
 <!-- EDIT ME-->
 <!-- REMOVE THE squiggles "~" surrounding this (this should not be a code block) -->
-~~~
 
 This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).  
 The repository is setup so that you can manage your packages entirely from the GitHub web interface (using AppVeyor to update and push packages) and/or using the local repository copy.
