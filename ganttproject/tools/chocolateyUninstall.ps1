@@ -1,9 +1,9 @@
 $ErrorActionPreference = 'Stop';
 
-$packageName = 'librecad'
+$packageName = 'ganttproject'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName 'LibreCAD'
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'GanttProject'
 
 if ($key.Count -eq 1) {
   $key | % {

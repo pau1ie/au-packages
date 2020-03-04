@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ganttproject</id>
+    <version>2.8.10.20200217</version>
+    <title>GanttProject</title>
+    <owners>chocolatey</owners>
+    <authors>BarD Software s.r.o and Dmitry Barashev</authors>
+    <licenseUrl>https://github.com/bardsoftware/ganttproject/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.ganttproject.biz/</projectUrl>
+    <projectSourceUrl>https://github.com/bardsoftware/ganttproject</projectSourceUrl>
+    <docsUrl>http://docs.ganttproject.biz/</docsUrl>
+    <bugTrackerUrl>https://github.com/bardsoftware/ganttproject/issues</bugTrackerUrl>
+    <iconUrl>https://www.ganttproject.biz/img/ganttproject_64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+GanttProject is an open-source desktop project scheduling and management tool. It is written in Java/Swing.    </description>
+    <summary>Desktop project scheduling and management tool</summary>
+    <releaseNotes>https://github.com/bardsoftware/ganttproject/releases/tag/2.8.10</releaseNotes>
+    <copyright />
+    <tags>ganttproject project-management task schedule</tags>
+    <packageSourceUrl>https://github.com/pau1ie/au-packages/tree/master/ganttproject</packageSourceUrl>
+    <dependencies>
+      <dependency id="openjdk" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
