@@ -24,7 +24,7 @@ function global:au_GetLatest {
 
   $version  = ($url -split '-' | select -Last 1 -Skip 1)
 
-  $releaseNotesUrl = "$domain/bardsoftware/ganttproject/releases/tag/" + $version
+  $releaseNotesUrl = "$domain/bardsoftware/ganttproject/releases/tag/ganttproject-" + $version
 
   @{
     URL32 = $domain + $url
