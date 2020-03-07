@@ -22,7 +22,7 @@ GanttProject is an open-source desktop project scheduling and management tool. I
     <tags>ganttproject project-management task schedule</tags>
     <packageSourceUrl>https://github.com/pau1ie/au-packages/tree/master/ganttproject</packageSourceUrl>
     <dependencies>
-      <dependency id="openjdk" />
+      <dependency id="openjdk" version="11.0" />
     </dependencies>
   </metadata>
   <files>
