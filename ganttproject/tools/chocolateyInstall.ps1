@@ -7,9 +7,9 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'GanttProject'
 
-  checksum       = 'd6a3e69166763c911acb717e7329463239742ff41e1cf262ec0c719044b09785'
+  checksum       = '50d325732bbaafde312ae27e99bca50a1a82a1afe19e5765640c59800e6a2ce2'
   checksumType   = 'sha256'
-  url            = 'https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-2.8.10/ganttproject-2.8.10-r2363.exe'
+  url            = 'https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-2.8.11/ganttproject-2.8.11-r2396.exe'
   silentArgs     = ("/S /D={0}\GanttProject" -f $progfiles )
   validExitCodes = @(0)
 }
