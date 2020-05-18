@@ -24,5 +24,16 @@ $shortcut = $shell.CreateShortcut("{0}\Microsoft\Windows\Start Menu\Programs\Gan
 $shortcut.TargetPath = $shortcut.TargetPath -replace ".exe$",".bat"
 $shortcut.Save()
 
+# Edit the file association to run the batch file rather the exe
+# - exe tries to install oracle jdk
+
+$ftc="ftye GanttProject File=$progfiles\GanttProject\ganttproject.bat `"%1`""
 cmd /c assoc .gan=GanttProject File
-cmd /c ftype "GanttProject File"=("{0}\GanttProject\ganttproject.bat" -f $progfiles) "%1"
+cmd /c "$ftc"
+
+# Edit the batch file to set the correct install location
+
+$batdir = "$progfiles\GanttProject"
+$batfile = "$batdir\ganttproject.bat"
+$regex = "SET GP_HOME.*$"
+(Get-Content $batfile) -replace $regex, $batdir | Set-Content $file
