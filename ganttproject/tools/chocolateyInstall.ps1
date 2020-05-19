@@ -27,13 +27,15 @@ $shortcut.Save()
 # Edit the file association to run the batch file rather the exe
 # - exe tries to install oracle jdk
 
-$ftc="ftye GanttProject File=$progfiles\GanttProject\ganttproject.bat `"%1`""
+$ftc="ftype GanttProject File=`"$progfiles\GanttProject\ganttproject.bat`" `"%1`""
+Write-Output "$ftc"
 cmd /c assoc .gan=GanttProject File
 cmd /c "$ftc"
 
-# Edit the batch file to set the correct install location
+# Edit the batch file to set the correct install location so it can be called from any directory.
+# Also full  path for the plugin directory.
 
 $batdir = "$progfiles\GanttProject"
 $batfile = "$batdir\ganttproject.bat"
-$regex = "SET GP_HOME.*$"
-(Get-Content $batfile) -replace $regex, $batdir | Set-Content $file
+$regex = "SET GP_HOME=.*$"
+(Get-Content $batfile) -replace $regex, "SET GP_HOME=$batdir" -replace "-plugins-dir *plugins", "-plugins-dir `"%GP_HOME%\plugins`"" | Set-Content $batfile
