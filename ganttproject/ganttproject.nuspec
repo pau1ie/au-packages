@@ -14,7 +14,14 @@
     <bugTrackerUrl>https://github.com/bardsoftware/ganttproject/issues</bugTrackerUrl>
     <iconUrl>https://www.ganttproject.biz/img/ganttproject_64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[This is all rather unsatisfactory. 
+    <description><![CDATA[Gantt Project
+	
+Gantt Project is a free project scheduling and management app.
+ It helps peroject managers create gantt charts to aid in managing tasks and resources in projects.
+
+Packaging Notes
+	
+The situation with Java is rather unsatisfactory. 
 
 GanttProject requires Java to run. There are several different providers of java,
 including Oracle JDK, OpenJDK and AdoptOpenJDK.
