@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ganttproject</id>
-    <version>2.8.11</version>
+    <version>3.1.3100.20210616</version>
     <title>GanttProject</title>
     <owners>chocolatey</owners>
     <authors>BarD Software s.r.o and Dmitry Barashev</authors>
@@ -19,32 +19,14 @@
 Gantt Project is a free project scheduling and management app.
  It helps peroject managers create gantt charts to aid in managing tasks and resources in projects.
 
-Packaging Notes
-	
-The situation with Java is rather unsatisfactory. 
-
-GanttProject requires Java to run. There are several different providers of java,
-including Oracle JDK, OpenJDK and AdoptOpenJDK.
-
-Chocolatey doesn't yet allow applications to create a "provides" tag. This would be ideal,
-because then the user could decide which java to use. 
-
-The Oracle JDK would be the default option, but it seems Oracle are changing the license on their JDK. OpenJDK
-would seem like a better option, but that doesn't set up the registry keys so the stub executable 
-which comes with GanttProject recognises that Java is installed. AdoptOpenJDK can do so, but it is an
-install option.
-
-Thus I have set up this package to use OpenJDK, because it is the most popular. Thus I need to avoid calling
-the stub executable, and so I use the batch file instead. I update the default application with assoc and ftype.
-The batch file is also updated with the install directory and the plugins.
 ]]></description>
     <summary>Desktop project scheduling and management tool</summary>
-    <releaseNotes>https://github.com/bardsoftware/ganttproject/releases/tag/ganttproject-2.8.11</releaseNotes>
+    <releaseNotes>https://github.com/bardsoftware/ganttproject/releases/tag/ganttproject-3.1.3100</releaseNotes>
     <copyright />
     <tags>ganttproject project-management task schedule</tags>
     <packageSourceUrl>https://github.com/pau1ie/au-packages/tree/master/ganttproject</packageSourceUrl>
     <dependencies>
-      <dependency id="openjdk" version="11.0" />
+      <dependency id="openjdk" version="[11.0,12.0)" />
     </dependencies>
   </metadata>
   <files>

@@ -7,35 +7,11 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'GanttProject'
 
-  checksum       = '50d325732bbaafde312ae27e99bca50a1a82a1afe19e5765640c59800e6a2ce2'
+  checksum       = '48961a97894e827b2e5a36893d144293653852f8bf64efb35aa733aa8721dcf2'
   checksumType   = 'sha256'
-  url            = 'https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-2.8.11/ganttproject-2.8.11-r2396.exe'
+  url            = 'https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-3.1.3100/ganttproject-3.1.3100.exe'
   silentArgs     = ("/S /D={0}\GanttProject" -f $progfiles )
   validExitCodes = @(0)
 }
 
 Install-ChocolateyPackage @packageArgs
-
-# Update install so it can be run with openjdk.
-
-$appdata = $Env:ALLUSERSPROFILE
-$shell = New-Object -COM WScript.Shell
-$shortcut = $shell.CreateShortcut("{0}\Microsoft\Windows\Start Menu\Programs\GanttProject\GanttProject.lnk" -f $appdata)
-$shortcut.TargetPath = $shortcut.TargetPath -replace ".exe$",".bat"
-$shortcut.Save()
-
-# Edit the file association to run the batch file rather the exe
-# - exe tries to install oracle jdk
-
-$ftc="ftype GanttProject File=`"$progfiles\GanttProject\ganttproject.bat`" `"%1`""
-Write-Output "$ftc"
-cmd /c assoc .gan=GanttProject File
-cmd /c "$ftc"
-
-# Edit the batch file to set the correct install location so it can be called from any directory.
-# Also full  path for the plugin directory.
-
-$batdir = "$progfiles\GanttProject"
-$batfile = "$batdir\ganttproject.bat"
-$regex = "SET GP_HOME=.*$"
-(Get-Content $batfile) -replace $regex, "SET GP_HOME=$batdir" -replace "-plugins-dir *plugins", "-plugins-dir `"%GP_HOME%\plugins`"" | Set-Content $batfile

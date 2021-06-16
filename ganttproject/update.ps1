@@ -22,7 +22,7 @@ function global:au_GetLatest {
   $re    = '\.exe$'
   $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-  $version  = ($url -split '-' | select -Last 1 -Skip 1)
+  $version  = ($url -split '[-/]' | select -Last 1 -Skip 2)
 
   $releaseNotesUrl = "$domain/bardsoftware/ganttproject/releases/tag/ganttproject-" + $version
 
