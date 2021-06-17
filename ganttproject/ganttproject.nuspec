@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ganttproject</id>
-    <version>3.1.3100.20210616</version>
+    <version>3.1.3100</version>
     <title>GanttProject</title>
     <owners>chocolatey</owners>
     <authors>BarD Software s.r.o and Dmitry Barashev</authors>
@@ -12,7 +12,7 @@
     <projectSourceUrl>https://github.com/bardsoftware/ganttproject</projectSourceUrl>
     <docsUrl>http://docs.ganttproject.biz/</docsUrl>
     <bugTrackerUrl>https://github.com/bardsoftware/ganttproject/issues</bugTrackerUrl>
-    <iconUrl>https://www.ganttproject.biz/img/ganttproject_64.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/bardsoftware/ganttproject/a5e3884165ba1d682cee2966564c54d8090824de/build-cfg/ganttproject.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[Gantt Project
 	
